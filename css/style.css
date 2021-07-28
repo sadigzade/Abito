@@ -76,7 +76,8 @@ p {
 }
 
 .header {
-  padding-top: 30px;
+  padding: 30px 0;
+  margin-bottom: 12px;
 }
 
 .header .navbar {
@@ -90,11 +91,6 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 24px;
-}
-
-.header .navbar .logo .svg-logo-dims {
-  width: 90px;
-  height: 27px;
 }
 
 .header .navbar-menu {
@@ -162,4 +158,133 @@ p {
 
 .header .search-panel .search-button__text {
   margin-left: 5px;
+}
+
+.content ._container {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  grid-template-rows: 28px auto;
+  gap: 23px 30px;
+}
+
+.content .main-title,
+.content .service-title {
+  -ms-flex-item-align: end;
+      align-self: end;
+  font-weight: 700;
+}
+
+.content .main-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.content .service-title {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.content .main .content-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.content .main .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content .main .cards .card {
+  margin-bottom: 35px;
+  max-width: 264px;
+}
+
+.content .main .cards .card:not(:nth-child(3n)) {
+  margin-right: 20px;
+}
+
+.content .main .cards .card-image {
+  border-radius: 10px;
+  width: 264px;
+  height: 178px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content .main .cards .card-header {
+  margin-top: 8px;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content .main .cards .card-header__title {
+  font-size: 16px;
+  line-height: 19px;
+  color: #256eeb;
+}
+
+.content .main .cards .card-price {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: #0a143a;
+  margin-bottom: 10px;
+}
+
+.content .main .cards .card-text {
+  margin-bottom: 4px;
+  color: #c4c4c4;
+}
+
+.content .sidebar .service:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.content .sidebar .service-title {
+  color: #0a143a;
+  font-weight: 700;
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+
+.content .sidebar .service-text {
+  color: #0a143a;
+  max-width: 217px;
+}
+
+.content .sidebar .footer {
+  margin-top: 18px;
+}
+
+.content .sidebar .footer-text {
+  color: #c4c4c4;
+}
+
+.content .sidebar .footer-menu {
+  margin-bottom: 16px;
+}
+
+.content .sidebar .footer-menu__item {
+  margin-top: 5px;
+}
+
+.content .sidebar .footer-menu__link {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #c4c4c4;
+}
+
+.content .sidebar .footer-link {
+  color: inherit;
+  font-size: 12px;
+  line-height: 14px;
 }
