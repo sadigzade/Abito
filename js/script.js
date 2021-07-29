@@ -1,3 +1,23 @@
+const disableScroll = () => {
+  const widthScroll = window.innerWidth - document.body.offsetWidth
+  document.body.dbScrollY = window.scrollY
+  document.body.style.cssText = `
+        position: fixed;
+        top: ${-window.scrollY}px;
+        left: 0;
+        width: 100%;
+        hight: 100vh;
+        overflow: hidden;
+        padding-right: ${widthScroll}px;
+    `
+}
+
+const enableScroll = () => {
+  document.body.style.cssText = ''
+  window.scroll({
+    top: document.body.dbScrollY
+  })
+};
 function testWebP(callback) {
   var webP = new Image();
   webP.onload = webP.onerror = function () {
@@ -13,22 +33,37 @@ testWebP(function (support) {
     document.querySelector('body').classList.add('no-webp');
   }
 });;
-$(document).ready(function () {
-  $('.menu__burger').click(function (event) {
-    $('.menu__burger, .menu__body').toggleClass('_active');
-    $('.header').toggleClass('_special');
-  });
-});;
-const swiper = new Swiper(".mySwiper", {
+const burger = document.querySelector('.button-menu__wrapper');
+const navbarPanel = document.querySelector('.navbar-panel');
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle('open');
+  navbarPanel.classList.toggle('open');
+
+  if (burger.matches('.open') && navbarPanel.matches('.open')) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
+});
+var swiper = new Swiper(".mySwiper", {
   spaceBetween: 10,
-  slidesPerView: 5,
+  slidesPerView: 4,
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
 });
-const swiper2 = new Swiper(".mySwiper2", {
+var swiper2 = new Swiper(".mySwiper2", {
   spaceBetween: 10,
   thumbs: {
     swiper: swiper,
   },
 });;
+
+const likeIcons = document.querySelectorAll('.like-icon');
+
+for (let like of likeIcons) {
+  like.addEventListener("click", () => {
+    like.classList.toggle("active");
+  })
+}
