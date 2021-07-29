@@ -108,22 +108,6 @@ p {
   margin-right: 14px;
 }
 
-.header .navbar .button-group .button {
-  display: inline-block;
-  border-radius: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-.header .navbar .button-group .button-link {
-  color: inherit;
-}
-
-.header .navbar .button-group .button-primary {
-  color: #fff;
-  background: #256eeb;
-}
-
 .header .search-panel {
   height: 50px;
   background: #256eeb;
@@ -158,6 +142,22 @@ p {
 
 .header .search-panel .search-button__text {
   margin-left: 5px;
+}
+
+.button-group .button {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.button-group .button-link {
+  color: inherit;
+}
+
+.button-group .button-primary {
+  color: #fff;
+  background: #256eeb;
 }
 
 .content ._container {
@@ -284,6 +284,170 @@ p {
 }
 
 .content .sidebar .footer-link {
+  color: inherit;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.single-content ._container {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.single-content .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.single-content .main .content {
+  max-width: 460px;
+}
+
+.single-content .main .content-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.single-content .main .content .mySwiper2 {
+  height: 357px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.single-content .main .content .mySwiper {
+  height: 20%;
+  padding: 10px 0;
+  border-radius: 3px;
+}
+
+.single-content .main .content .mySwiper .swiper-slide {
+  width: 20%;
+  height: 100%;
+  opacity: .4;
+}
+
+.single-content .main .content .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.single-content .main .content .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+}
+
+.single-content .main .content-text {
+  line-height: 140%;
+  margin-top: 20px;
+}
+
+.single-content .main .author {
+  margin-left: 30px;
+  min-width: 264px;
+}
+
+.single-content .main .author .single-price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.single-content .main .author-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px 0 30px;
+}
+
+.single-content .main .author-info__name {
+  font-weight: 700;
+}
+
+.single-content .main .author-info .rating {
+  margin-top: 4px;
+}
+
+.single-content .main .author-info .rating-counter {
+  opacity: .5;
+  margin-left: 8px;
+}
+
+.single-content .main .author-info__status {
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 5px;
+}
+
+.single-content .main .author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.single-content .main .author .button-group .button {
+  display: block;
+  width: 100%;
+  margin-bottom: 14px;
+  height: 54px;
+}
+
+.single-content .main .author .button-group .button-success {
+  background: #14b4be;
+  color: #fff;
+}
+
+.single-content .sidebar-banner {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.single-content .sidebar-banner img {
+  height: 185px;
+}
+
+.single-content .sidebar .footer {
+  margin-top: 18px;
+}
+
+.single-content .sidebar .footer-text {
+  color: #c4c4c4;
+}
+
+.single-content .sidebar .footer-menu {
+  margin-bottom: 16px;
+}
+
+.single-content .sidebar .footer-menu__item {
+  margin-top: 5px;
+}
+
+.single-content .sidebar .footer-menu__link {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #c4c4c4;
+}
+
+.single-content .sidebar .footer-link {
   color: inherit;
   font-size: 12px;
   line-height: 14px;
